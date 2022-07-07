@@ -1,0 +1,51 @@
+<div class="login-dark">
+
+
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { data: { turbo: false} } ) do |f| %>
+    <div style= "display: none;">
+      <%= render "devise/shared/error_messages", resource: resource %>
+    </div>
+
+    <div class="illustration form-group"><%= image_tag('paulogo.png') %></div>
+
+    <div class="field form-group">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder:"İsim", class:"form-control" %>
+    </div>
+
+
+    <div class="field form-group">
+      <%= f.text_field :surname, autofocus: true, autocomplete: "surname", placeholder:"Soyisim", class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= f.number_field :phone, autofocus: true, autocomplete: "phone", placeholder:"Telefon numarası", class:"form-control" %>
+    </div>
+
+      <div class="field form-group">
+      <%= f.number_field :schoolNumber, autofocus: true, autocomplete: "Okul numarası (isteğe bağlı)", placeholder:"School Number", class:"form-control"%>
+    </div>
+
+    <div class="field form-group">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email", class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <% if @minimum_password_length %>
+        <%= f.password_field :password, autocomplete: "off", placeholder:"Şifre (Min ".concat(@minimum_password_length.to_s)+ " karakter)", class:"form-control"%>
+      <% end %>
+    </div>
+
+    <div class="field form-group">
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Şifre tekrar", class:"form-control" %>
+    </div>
+
+    <div class="actions form-group">
+      <%= f.submit "Sign up", class:"btn btn-primary btn-block"%>
+    </div><div class="center_div">
+      <%= render "devise/shared/links" %>
+    </div>
+    <% end %>
+
+
+</div>
