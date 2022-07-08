@@ -119,10 +119,17 @@
   font-size: 1rem;
 }
 
+
 @media screen and (max-width: 992px) {
   .login-dark {
     background: url('teknokent.jpg') no-repeat center center fixed;
     background-size:cover;
+    }
+  .about-logo{
+      display: flex;
+      justify-content: center !important;
+      align-items: center;
+      margin-top: 2rem;
     }
 
 }
@@ -150,6 +157,12 @@
     width:100%;
     margin-top:4rem;
     margin-right:12rem;
+  }
+  .about-logo{
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    margin-top: 2rem;
   }
 
 }

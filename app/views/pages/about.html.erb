@@ -1,107 +1,96 @@
-<div style="background: #bec6ce;">
+<div style="background: #dee2e2;">
   <div class="container py-5">
     <div class="row h-100 align-items-center py-5">
-      <div class="col-lg-6">
-        <h1 class="display-4 font-weight-bold">About us page</h1>
-        <p class="lead text-muted mb-0">Create a minimal about us page using Bootstrap 4.</p>
-        <p class="lead text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.
+      <div class="col-lg-6 col-12">
+        <h2 class="font-weight-bold">Lab2023</h2>
+        <p class="lead text-muted"> 
+          Biz; pazarlamacılar, tasarımcılar ve geliştiricilerden oluşan bir ekibiz. 
+          Müşteriler, web ve mobil uygulamalarını geliştirmemiz için bizimle iletişime geçer.
+          Taslağını hazırlarız, prototip oluştururuz, uygulamayı hazırlarız ve göndeririz. 
+          Yazılımı gönderdikten sonra, yazılım kullanımını ölçer ve sürdürürüz.
         </p>
+        <a href="https://lab2023.com/" class="btn btn-info px-3 rounded-pill shadow-sm"> Daha Fazla Bilgi İçin </a>
       </div>
-      <div class="col-lg-6 d-none d-lg-block"><img src="https://bootstrapious.com/i/snippets/sn-about/illus.png" alt="" class="img-fluid"></div>
+      <div class="about-logo col-lg-6 col-12 d-flex justify-content-end align-items-center">
+        <%= image_tag "lab2023.png", class: "img-fluid shadow", style:"border-radius:15px;"%>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="bg-white py-5">
   <div class="container py-5">
-    <div class="row align-items-center mb-5">
-      <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
-        <h2 class=" font-weight-bold">Lorem ipsum dolor sit amet</h2>
-        <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+    <div class="row align-items-center py-5"> 
+    
+      <div class="about-logo col-lg-6 col-12 d-flex justify-content-start align-items-center">
+        <%= image_tag "teknokent-logo.jpg", class: "img-fluid shadow", style:"border-radius:15px;"%>
       </div>
-      <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="https://bootstrapious.com/i/snippets/sn-about/img-1.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
-    	</div>
-	</div>
+    
+
+      <div class="col-lg-6 col-12 mt-4">
+          <h2 class="font-weight-bold">Pamukkale Teknokent</h2>
+          <p class="lead text-muted mb-4">Pamukkale Teknokent, üniversite bünyesinde, araştırma kurumlarının ve sanayi kuruluşlarının aynı ortam içerisinde araştırma, geliştirme ve inovasyon çalışmalarını sürdürdükleri, katma değerli ürünler ortaya çıkardıkları, birbirleri arasında bilgi ve teknoloji transferi gerçekleştirdikleri; akademik, ekonomik ve sosyal yapının bütünleştiği organize bir araştırma ve iş merkezidir.</p>
+          <a href="https://www.pauteknokent.com.tr/index.php" class="btn btn-secondary px-3 rounded-pill shadow-sm">Daha Fazla Bilgi İçin</a>
+      </div>
+
+      
+    </div>
+  </div>
 </div>
 
-<div  class="py-5" style="background: #bec6ce;">
-			<div class="container py-5">
-		    	<div class="row align-items-center">
-		      		<div class="col-lg-5 px-5 mx-auto"><img src="https://bootstrapious.com/i/snippets/sn-about/img-2.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
-		      		<div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
-		        	<h2 class="font-weight-bold">Lorem ipsum dolor sit amet</h2>
-		        	<p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
-		      		</div>
-		    	</div>
-		  	</div>
-		</div>
-	</div>
-</div>
 
-<div class="bg-light py-5">
+<div class="py-5" style="background: #dee2e2;">
   <div class="container py-5">
-    <div class="row mb-4">
-      <div class="col-lg-5">
-        <h2 class="display-4 font-weight-light">Our team</h2>
-        <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <div class="row mb-4 justify-content-center">
+      <div class="col-lg-5 text-center">
+        <h1 class="font-weight-bold">Geliştiriciler</h1>
       </div>
     </div>
 
     <div class="row text-center">
       <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-4.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-          <h5 class="mb-0">Manuella Nevoresky</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+      <div class="col-lg-6 col-sm-12 mb-5">
+        <div class="bg-white rounded shadow-sm py-5 px-4">
+          <%= image_tag "sabri-pp.jpeg", class:"img-fluid rounded-circle mb-3 img-thumbnail shadow-sm", style:"width:100px;"%>
+          <h5 class="mb-0">Sabri ÇAKIR</h5>
+          <p class="text-muted font-italic mt-2"> Pamukkale Üniversitesi Bilgisayar Mühendisliği Öğrencisi <br/> - Full Stack Web Developer -</p>
           <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+            <li class="list-inline-item">
+              <a href="https://github.com/sabricakir" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/sabri-%C3%A7akir-aa1985212" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+              </svg>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
       <!-- End-->
 
       <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-          <h5 class="mb-0">Samuel Hardy</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+      <div class="col-lg-6 col-sm-12 mb-5">
+        <div class="bg-white rounded shadow-sm py-5 px-4">
+          <%= image_tag "riza-pp.jpeg", class:"img-fluid rounded-circle mb-3 img-thumbnail shadow-sm", style:"width:100px;"%>
+          <h5 class="mb-0">Rıza Doğukan KOŞAR</h5>
+          <p class="text-muted font-italic mt-2"> Pamukkale Üniversitesi Bilgisayar Mühendisliği Öğrencisi <br/> - Android Developer -</p>
           <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End-->
-
-      <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-2.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-          <h5 class="mb-0">Tom Sunderland</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
-          <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End-->
-
-      <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-1.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-          <h5 class="mb-0">John Tarly</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
-          <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+          <li class="list-inline-item">
+              <a href="https://github.com/rizadogukankosar" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/rizadogukankosar/" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+              </svg>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -112,8 +101,8 @@
 </div>
 
 
-<footer class="p-3 d-flex justify-content-center align-items-center"  style="background: #bec6ce;">
+<footer class="p-3 d-flex justify-content-center align-items-center">
   <div class="container text-center">
-    <p class="font-italic text-muted ">&copy; Copyrights Lab2023.com All rights reserved.</p>
+    <p class="font-italic text-muted ">&copy; Copyrights Lab2023.com</p>
   </div>
 </footer>
