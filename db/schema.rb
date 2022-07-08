@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_08_202709) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_08_203054) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -49,7 +49,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_08_202709) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "surname"
-    t.integer "phone", limit: 10
+    t.decimal "phone"
     t.integer "schoolNumber"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
