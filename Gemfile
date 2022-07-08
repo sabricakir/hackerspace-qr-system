@@ -64,7 +64,7 @@ gem 'gravatar_image_tag', '~> 1.2'
 # Use Sass to process CSS
 gem "sassc-rails"
 
-gem "sqlite3", "~> 1.4"
+gem 'sqlite3', '~> 1.3.13'
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
