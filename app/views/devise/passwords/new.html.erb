@@ -3,7 +3,7 @@
 
   <form method="post">
           <h2 class="sr-only">Login Form</h2>
-          <div class="illustration"><%= image_tag('paulogo.png') %></div>
+          <div class="illustration"><%= image_tag "https://seeklogo.com/images/P/pamukkale-universitesi-logo-7389B23A32-seeklogo.com.png" %></div>
           <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
             <%= render "devise/shared/error_messages", resource: resource %>
 

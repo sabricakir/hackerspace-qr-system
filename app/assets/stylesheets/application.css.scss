@@ -19,7 +19,7 @@
 
  .login-dark {
    height:1000px;
-   background: url('teknokent.jpg') no-repeat center center fixed;
+   background: url('https://www.pauteknokent.com.tr/images/teknokent.jpg') no-repeat center center fixed;
    background-size:cover;
    position:relative;
 
@@ -163,6 +163,10 @@
     justify-content: center !important;
     align-items: center;
     margin-top: 2rem;
+  }
+  #contact-section-first{
+    border-right: none!important;
+    border-bottom: 1px inset #1376c1;
   }
 
 }
