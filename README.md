@@ -1,1 +1,1 @@
-## QR Application for *Hackerspace*
+## QR Application for *'Hackerspace'*
