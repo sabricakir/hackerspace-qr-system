@@ -26,11 +26,11 @@
         </div>
       </div>
 
-  <div class="row justify-content-center">
+  <div data-controller="hidden-field" class="row justify-content-center">
 
-        <button class="btn btn-info col-10" id="email-switch"> Email </button>
+        <button data-action="click->hidden-field#emailHide" class="btn btn-info col-10"> Email </button>
         <div class="field form-group col-12 mt-2">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-email", style:"display:none;"%>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", data:{"hidden-field-target":"email"}, class:"hidden-field form-control form-email"%>
         </div>
 
 
@@ -38,15 +38,15 @@
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
 
-        <button class="btn btn-info col-10" id="password-switch"> Şifre </button>
+        <button data-action="click->hidden-field#passwordHide" class="btn btn-info col-10"> Şifre </button>
         <div class="field form-group col-12 mt-2">
           <% if @minimum_password_length %>
-           <%= f.password_field :password, placeholder:"Şifrenizi Giriniz (Min. ".concat(@minimum_password_length.to_s)+ " Karakter)", class:"form-control form-password", style:"display:none;"%>
+           <%= f.password_field :password, data:{"hidden-field-target":"password"}, placeholder:"Şifrenizi Giriniz (Min. ".concat(@minimum_password_length.to_s)+ " Karakter)", class:"hidden-field form-control form-password"%>
          <% end %>
         </div>
 
         <div class="field form-group col-12">
-          <%= f.password_field :password_confirmation, class:"form-control form-password", placeholder:"Şifrenizi Tekrar Giriniz", style:"display:none;"%>
+          <%= f.password_field :password_confirmation, data:{"hidden-field-target":"password_confirmation"}, class:"hidden-field form-control form-password", placeholder:"Şifrenizi Tekrar Giriniz"%>
         </div>
 
   </div>
