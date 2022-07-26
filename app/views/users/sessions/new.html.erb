@@ -1,6 +1,6 @@
 <div class="login-dark">
             <h2 class="sr-only">Login Form</h2>
-            <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { data: { turbo: false} } ) do |f| %>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div style= "display: none;">
               <%= render "devise/shared/error_messages", resource: resource %>
             </div>
@@ -23,10 +23,10 @@
               <% end %>
 
               <div class="actions form-group">
-                <%= f.submit "Giriş Yap" ,class: "btn btn-primary btn-block "%>
+                <%= f.submit "Giriş Yap" ,class: "btn btn-primary btn-block"%>
               </div><a><br><div class="center_div">
                 <%= render "devise/shared/links" %>
               </div></a>
 
             <% end %>
-    </div>
+</div>

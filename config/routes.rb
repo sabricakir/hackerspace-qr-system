@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  devise_for :users
+
+  devise_for :users, controllers: { sessions: "users/sessions" , registrations: "users/registrations"}
   devise_scope :user do
-    get '/users/sign_out' => 'devise/sessions#destroy'
-    post '/users/sign_up' => 'devise/registrations#create'
+    get '/users/sign_out' => 'users/sessions#destroy'
+    post '/users/sign_up' => 'users/registrations#create'
+    get '/users/edit/:id' => 'users/registrations#edit'
 
   end
 
