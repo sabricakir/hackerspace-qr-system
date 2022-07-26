@@ -10,21 +10,25 @@
 
 
 
-      <div class="form-group text-center">
+    <div class="form-group text-center" data-controller="user-avatar">
+        
         <div class="row">
-          <div class="col-12">
-            <%= image_tag user_avatar(resource), class: "rounded-circle" %>
-          </div>
-          <div class="col-12 mt-3">
-            <label class="btn btn-dark">
-                Dosya Seçin
-            <span style="display:none;">
-              <%= f.file_field :avatar%>
-            </span>
-</label>
-          </div>
+            <div class="col-12">
+              <%= image_tag user_avatar(resource), class: "rounded-circle", data: { target: "user-avatar.output" } %>
+            </div>
+          
+        <div class="col-12 mt-3">
+          <label class="btn btn-dark">
+              Dosya Seçin
+          <span style="display:none;">
+            <%= f.file_field :avatar, data: {target: "user-avatar.input", action: "user-avatar#replacePhoto" }%>
+          </span>
+          </label>
         </div>
+
       </div>
+
+    </div>
 
   <div data-controller="hidden-field" class="row justify-content-center">
 
