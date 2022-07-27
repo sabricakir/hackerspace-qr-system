@@ -59,9 +59,9 @@ gem 'sass-rails'
 gem 'file_validators'
 gem 'paperclip', '~> 6.1'
 gem 'gravatar_image_tag', '~> 1.2'
-
 # Use Sass to process CSS
 gem "sassc-rails"
+gem 'symmetric-encryption'
 
 
 

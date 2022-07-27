@@ -23,7 +23,7 @@
               <% end %>
 
               <div class="actions form-group">
-                <%= f.submit "Giriş Yap" ,class: "btn btn-primary btn-block"%>
+                <%= f.submit "Giriş Yap" ,class: "btn btn-primary btn-block", data:{turbo_action: "replace", action:"click->cache#clear"}%>
               </div><a><br><div class="center_div">
                 <%= render "devise/shared/links" %>
               </div></a>

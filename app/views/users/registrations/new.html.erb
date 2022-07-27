@@ -41,7 +41,7 @@
     </div>
 
     <div class="actions form-group">
-      <%= f.submit "Kayıt Ol", class:"btn btn-primary btn-block"%>
+      <%= f.submit "Kayıt Ol", class:"btn btn-primary btn-block",data:{turbo_action: "replace", action:"click->cache#clear"}%>
     </div><div class="center_div">
       <%= render "devise/shared/links" %>
     </div>

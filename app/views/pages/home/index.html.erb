@@ -5,7 +5,7 @@
             <div class="illustration"><%= image_tag user_avatar(current_user), class: "rounded-circle" %></div>
           <div class="center_div">
             <h4><%= @currentUser.name.titleize%></h4> <h4><%= @currentUser.surname.upcase%></h4>
-            <div class="d-flex justify-content-center align-items-center"> <%= render_qr_code(@userQrDetails) %> </div>
+            <div class="d-flex justify-content-center align-items-center"> <%= render_qr_code(@encrypted_data) %> </div>
             <h6>Kapıyı açmak için qr kodu okutunuz</h6>
           </div>
 
