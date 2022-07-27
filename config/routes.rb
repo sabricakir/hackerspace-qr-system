@@ -17,8 +17,8 @@ Rails.application.routes.draw do
     post :login, on: :collection, as: :login
   end
 
-  root to: "pages#home"
-  get '/about', to: 'pages#about'
-  get '/contact', to: 'pages#contact'
+  root to: "pages/home#index"
+  get '/about', to: 'pages/about#index'
+  get '/contact', to: 'pages/contact#index'
   get '/users/:id', to: 'users#show'
 end
