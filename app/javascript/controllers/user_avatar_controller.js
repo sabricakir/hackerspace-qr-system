@@ -16,5 +16,8 @@ export default class extends Controller {
   
        reader.readAsDataURL(input.files[0]);
      }
+     else {
+      console.log("Hello")
+     }
    }
 }

@@ -1,0 +1,27 @@
+<div class="login-dark">
+  <h2 class="sr-only">Login Form</h2>
+  <%= form_with(model: @user, data:{turbo: false}) do |f| %>
+
+  <div class="illustration form-group">
+    <%= image_tag "https://seeklogo.com/images/P/pamukkale-universitesi-logo-7389B23A32-seeklogo.com.png" %>
+  </div>
+  <div class="field form-group">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:
+    "form-control", placeholder: "Email" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.password_field :password, autocomplete: "current-password" , class:
+    "form-control", placeholder: "Password" %>
+  </div>
+
+  <div class="field">
+    <%= f.check_box :remember_me %> <%= f.label :remember_me, "Beni Hatırla" %>
+  </div>
+
+  <div class="actions form-group">
+    <%= f.submit "Giriş Yap" ,class: "btn btn-primary btn-block",
+    data:{turbo_action: "replace", action:"click->cache#clear"}%>
+  </div>
+  <%= link_to "Kayıt Ol", new_user_path%> <% end %>
+</div>

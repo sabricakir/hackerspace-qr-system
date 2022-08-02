@@ -1,36 +1,76 @@
-<div class="p-3 d-flex justify-content-center align-items-center", id="profile-card">
-	<div class="container-lg p-4">
-		<div class="profile-board profile-image d-flex flex-column justify-content-center align-items-center">
-			<div class= "d-flex justify-content-center align-items-center">
-				<div class="illustration"><%= image_tag user_avatar(current_user), class: "rounded-circle" %></div>
-			</div>
-			<p class="name mt-3"><%= @user.name.titleize + " " + @user.surname.upcase %></p>
-			<p class="profile-mail"><%= @user.email %></p>
-		  <div class="d-flex flex-column justify-content-start align-items-center mt-2">
-		  	<div>
-		  		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-		 	 	<path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-		 	 	</svg>
-		 	 	<span class="mx-2"> <%= @user.phone %> </span>
+<div
+  class="p-3 d-flex justify-content-center align-items-center"
+  ,
+  id="profile-card"
+>
+  <div class="container-lg p-4">
+    <div
+      class="profile-board profile-image d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="illustration">
+          <%= image_tag user_avatar(current_user), class: "rounded-circle" %>
+        </div>
+      </div>
+      <p class="name mt-3">
+        <%= @user.name.titleize + " " + @user.surname.upcase %>
+      </p>
+      <p class="profile-mail"><%= @user.email %></p>
+      <div
+        class="d-flex flex-column justify-content-start align-items-center mt-2"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-telephone-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+            />
+          </svg>
+          <span class="mx-2"> <%= @user.phone %> </span>
+        </div>
 
-		  	</div>
-
-			<% if @user.schoolNumber != nil%>
-			<div>
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
-				<path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/>
-				<path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"/>
-			</svg>
-		 	<span class="mx-2"> <%= @user.schoolNumber %> </span>
-			</div>
-			<% end %>
-		  </div>
-			<div class="d-flex justify-content-start align-items-center mt-4" data-controller="cache">
-				<%= link_to "Profili Düzenle", edit_user_registration_path(@user), class:"profile-btn btn btn-info mx-1"%>
-				<%= link_to "Çıkış Yap", users_sign_out_path, class:"profile-btn btn btn-danger mx-1", data:{turbo_action: "replace", action:"click->cache#clear"}%>
-			</div>
-			<div class="px-2 rounded mt-4"> <span class="join font-italic"> <%= time_ago_in_words(@user.created_at)%> önce katıldı.</span>
-			</div>
-		</div>
-	</div>
+        <% if @user.schoolNumber != nil%>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-mortarboard-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"
+            />
+            <path
+              d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"
+            />
+          </svg>
+          <span class="mx-2"> <%= @user.schoolNumber %> </span>
+        </div>
+        <% end %>
+      </div>
+      <div
+        class="d-flex justify-content-start align-items-center mt-4"
+        data-controller="cache"
+      >
+        <%= link_to "Profili Düzenle", edit_user_path(@user), class:"profile-btn
+        btn btn-info mx-1"%> <%= button_to "Çıkış Yap", logout_path,
+        class:"profile-btn btn btn-danger mx-1", method: :delete,
+        data:{turbo_action: "replace", action:"click->cache#clear"}%>
+      </div>
+      <div class="px-2 rounded mt-4">
+        <span class="join font-italic">
+          <%= time_ago_in_words(@user.created_at)%> önce katıldı.</span
+        >
+      </div>
+    </div>
+  </div>
 </div>
