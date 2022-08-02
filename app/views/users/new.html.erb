@@ -1,0 +1,51 @@
+<%= render 'shared/errors', obj:@user%>
+<div class="login-dark">
+  <%= form_with model:@user, data:{turbo: false} do |f| %>
+
+  <div class="illustration form-group">
+    <%= image_tag "https://seeklogo.com/images/P/pamukkale-universitesi-logo-7389B23A32-seeklogo.com.png" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name",
+    placeholder:"İsim", class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.text_field :surname, autofocus: true, autocomplete: "surname",
+    placeholder:"Soyisim", class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.text_field :phone, autofocus: true, autocomplete: "phone",
+    placeholder:"Telefon Numarası", class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.text_field :schoolNumber, autofocus: true, autocomplete: "Okul
+    numarası (İsteğe Bağlı)", placeholder:"School Number",
+    class:"form-control"%>
+  </div>
+
+  <div class="field form-group">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",
+    placeholder:"Email", class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.password_field :password, autocomplete: "off", placeholder:"Şifre (Min
+    8 karakter)", class:"form-control"%>
+  </div>
+
+  <div class="field form-group">
+    <%= f.password_field :password_confirmation, autocomplete: "off",
+    placeholder:"Şifrenizi Tekrar Girin", class:"form-control"%>
+  </div>
+
+  <div class="actions form-group">
+    <%= f.submit "Kayıt Ol", class:"btn btn-primary btn-block",
+    data:{turbo_action: "replace"}%>
+  </div>
+
+  <%= link_to "Giriş Yap", login_path %> <% end %>
+</div>

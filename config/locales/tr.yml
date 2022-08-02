@@ -1,3 +1,25 @@
 tr:
   errors:
     format: "%{message}"
+  datetime:
+    distance_in_words:
+      less_than_x_minutes: "%{count} dakikadan az bir süre"
+      x_minutes: "%{count} dakika"
+      x_hours: "%{count} saat"
+      x_days: "%{count} gün"
+      x_weeks: "%{count} hafta"
+      x_months: "%{count} ay"
+      x_years: "%{count} yıl"
+      about_x_hours: "Yaklaşık olarak %{count} saat"
+      about_x_days: "Yaklaşık olarak %{count} gün"
+      about_x_weeks: "Yaklaşık olarak %{count} hafta"
+      about_x_months: "Yaklaşık olarak %{count} ay"
+      about_x_years: "Yaklaşık olarak %{count} yıl"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: "Şifreler Eşleşmiyor!"
+              blank: "Lütfen Şifrenizi Tekrar Giriniz!"
