@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     if @user.save
       login(@user.id)
       flash[:notice] = "Hoş Geldiniz #{@user.name + ' ' + @user.surname}"
-      redirect_to @user
+      redirect_to root_path
     else
       render 'new'
     end
