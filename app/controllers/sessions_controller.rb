@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to root_path, notice: 'Başarıyla Giriş Yaptınız'
     else
       flash[:alert] = 'Email veya Şifre Yanlış!'
-      redirect_to login_path
+      redirect_to login_path, status: :unprocessable_entity
     end
   end
 

@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Hoş Geldiniz #{@user.name + ' ' + @user.surname}"
       redirect_to root_path
     else
-      render 'new'
+      render 'new', status: :unprocessable_entity
     end
   end
 
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
       flash[:notice] = "#{@user.name + ' ' + @user.surname} Hesabınız Başarıyla Güncellendi"
       redirect_to @user
     else
-      render 'edit'
+      render 'edit', status: :unprocessable_entity
     end
   end
 
